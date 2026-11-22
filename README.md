@@ -4,7 +4,7 @@
 >
 > 1. **Purpose & Scope:** **AURA-Grid Research Prototype & Architectural Demonstrator** is an incomplete, non-production architectural demonstration developed independently by **EL FILALI SALAH ADDINE** solely to support his doctoral application for the position *"Doctoral Researcher in Reliable and Explainable Multi-Agent AI Systems"* (Ref: **UOL08435**) within the **UBIX Research Group / SnT** at the **University of Luxembourg**, and for subsequent academic supervision upon admission.
 > 2. **100% Synthetic Data:** All grid topologies, substation identifiers, financial metrics, and failure scenarios included in this repository are entirely synthetic and simulated for conceptual demonstration. No proprietary, confidential, or real-world operational utility data is used.
-> 3. **Non-Liability:** This software is an experimental academic demonstrator and must not be deployed in real operational environments. The author assumes no responsibility or liability for any use of this code outside the evaluation of his doctoral candidacy or official academic supervision.
+> 3. **Non-Liability:** This software is an experimental academic demonstrator and must not be deployed in real operational environments. The author assumes no responsibility or liability whatsoever for any use, deployment, or reliance on this code.
 > 4. **License Scope:** The MIT License applies **exclusively** to the code snapshot published as **Release v1.2-DEMO (22 November 2026)**. All other commits, branches, prior revisions, and subsequent versions remain proprietary (All Rights Reserved). See [`LICENSE`](LICENSE).
 
 # AURA-Grid Research Prototype & Architectural Demonstrator — Auditable & Reliable Multi-Agent System for Regulated Energy Operations
@@ -265,6 +265,7 @@ aura-grid-poc/
 ├── app.py            # Full application (3 layers, single file)
 ├── requirements.txt  # streamlit, openai
 ├── README.md         # This document
+├── LICENSE           # Scoped MIT License (v1.2-DEMO)
 └── SPEC.md           # Technical specification
 ```
 
@@ -310,10 +311,10 @@ prior revisions, private repositories, and subsequent versions
 **EL FILALI SALAH ADDINE (All Rights Reserved)** and are **not** covered by
 this open-source grant.
 
-**© 2026 EL FILALI SALAH ADDINE.** This prototype was developed for the
-evaluation of the Author's doctoral application (Job Reference: **UOL08435**)
-within the **UBIX Research Group / SnT** at the **University of Luxembourg**,
-and for subsequent official academic supervision upon admission.
+**© 2026 EL FILALI SALAH ADDINE — Open-Source Academic Research Prototype
+(Release v1.2-DEMO, 22 Nov 2026, MIT Licensed).** Developed for University of
+Luxembourg (SnT / UBIX) doctoral candidacy evaluation (Ref: **UOL08435**).
+Non-production synthetic demonstrator; no warranty or liability.
 
 > ⚠️ **Disclaimer.** This software is an **incomplete Research Prototype &
 > Architectural Demonstrator**, provided **"AS IS"**, without warranty of any
