@@ -1,0 +1,23 @@
+{
+  "projects": {
+    "default": "e-learning-labo",
+    "aura-grid-project": "aura-grid-poc-app"
+  },
+  "targets": {
+    "e-learning-labo": {
+      "hosting": {
+        "elearning": [
+          "e-learning-labo"
+        ]
+      }
+    },
+    "aura-grid-poc-app": {
+      "hosting": {
+        "aura-grid": [
+          "aura-grid-poc-app"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

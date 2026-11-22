@@ -1,0 +1,43 @@
+# =============================================================================
+# .dockerignore — AURA-Grid PoC
+# =============================================================================
+# Réduit le contexte de build et exclut les fichiers inutiles/sensibles.
+#
+# IMPORTANT : ne PAS exclure `Ressources/` ni `.streamlit/`
+# (nécessaires au runtime : PDF servis en interne + thème/headless).
+# =============================================================================
+
+# --- VCS / CI ---------------------------------------------------------------
+.git/
+.github/
+.gitignore
+
+# --- Environnements virtuels / caches Python --------------------------------
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# --- Tests / documentation / scripts ----------------------------------------
+tests/
+docs/
+scripts/
+*.md
+SPEC.md
+LICENSE
+
+# --- Secrets / config locale ------------------------------------------------
+.env
+.env.*
+.env*
+
+# --- Outils / IDE -----------------------------------------------------------
+.cursor/
+.roo/
+.vscode/
+.idea/
+
+# --- Divers -----------------------------------------------------------------
+node_modules/

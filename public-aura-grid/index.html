@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AURA-Grid — Application</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        background: #1f1f1f;
+      }
+
+      body {
+        overflow: hidden;
+      }
+
+      /*
+       * The real application is hosted on Streamlit Community Cloud.
+       * This Firebase page is only a thin wrapper: it keeps the public
+       * aura-grid-poc-app.web.app URL while always loading the latest
+       * Streamlit deployment, so app updates no longer require a Firebase
+       * redeploy.
+       */
+      iframe {
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        background: #1f1f1f;
+      }
+
+      .fallback {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        padding: 2rem;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        color: #cccccc;
+        text-align: center;
+      }
+
+      .fallback a {
+        color: #0078d4;
+        text-decoration: none;
+      }
+
+      .fallback a:hover {
+        text-decoration: underline;
+      }
+    </style>
+    <!--
+      Cloudflare Web Analytics.
+      This token belongs to the Web Analytics site for
+      salah-phd-demo.streamlit.app (the Streamlit app itself). For dedicated
+      reporting on aura-grid-poc-app.web.app, create a separate Web Analytics
+      site in Cloudflare for this hostname and replace the token below with
+      the token of that new site.
+    -->
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4350840e922b4933b8a6647a3af815bf", "spa": true}'></script><!-- End Cloudflare Web Analytics -->
+  </head>
+  <body>
+    <div class="fallback">
+      <p>Chargement de l'application AURA-Grid…</p>
+      <p>
+        <a
+          href="https://salah-phd-demo.streamlit.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ouvrir l'application dans un nouvel onglet
+        </a>
+      </p>
+    </div>
+    <!--
+      /~/+/ is the app's own Streamlit route. Using it directly (rather than
+      the salah-phd-demo.streamlit.app root) bypasses the Streamlit Cloud
+      wrapper and its "Hosted with Streamlit / Created by ..." chrome, so the
+      embedded app is the only content visible.
+    -->
+    <iframe
+      src="https://salah-phd-demo.streamlit.app/~/+/?embedded=true"
+      title="AURA-Grid Research Prototype &amp; Architectural Demonstrator"
+      allow="clipboard-write; fullscreen"
+      referrerpolicy="strict-origin-when-cross-origin"
+    ></iframe>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+del /s
+del /f
+del C:\
+erase /s
+rd /s
+rmdir /s
+rm -rf
+format
+diskpart
+cipher /w
+vssadmin delete
+wmic shadowcopy delete
+wbadmin delete
+bcdedit
+bootrec
+reg delete
+reg add HKLM
+reg save
+regedit
+secedit
+wevtutil cl
+net user
+net localgroup
+runas
+takeown
+icacls
+cacls
+cmdkey
+ntdsutil
+procdump
+taskkill /f
+sc create
+sc delete
+sc stop
+schtasks /create
+schtasks /delete
+net stop
+curl
+certutil -urlcache
+certutil -decode
+bitsadmin
+ftp
+scp
+ssh
+nc
+telnet
+mshta
+rundll32
+regsvr32
+wscript
+cscript
+powershell
+pwsh
+cmd /c
+netsh advfirewall
+netsh int ip reset
+shutdown
+logoff
+git reset --hard
+git clean
+git push --force
+git branch -D
+git stash clear
+git filter-branch
+git reflog expire
+python -c
+python -
+pip uninstall
+npm install -g
+*format.com*
+*diskpart*
+*Remove-Item*
+*git reset --hard*

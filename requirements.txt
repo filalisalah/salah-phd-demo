@@ -1,0 +1,3 @@
+# The [pdf] extra installs streamlit-pdf for the in-page PDF viewer.
+streamlit[pdf]>=1.67
+openai>=1.0

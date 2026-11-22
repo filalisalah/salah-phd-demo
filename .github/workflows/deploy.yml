@@ -1,0 +1,137 @@
+# =============================================================================
+# CI — AURA-Grid PoC (déploiement 100% gratuit sur Streamlit Community Cloud)
+# =============================================================================
+# IMPORTANT — Comment fonctionne le déploiement :
+#   Streamlit Community Cloud (https://share.streamlit.io) NE se déploie PAS via
+#   une GitHub Action. La plateforme est connectée directement au dépôt GitHub
+#   (filalisalah/demo-phd-Ref-UOL08435, branche `main`) et redéploie
+#   automatiquement l'application à chaque push sur cette branche.
+#
+#   Ce workflow ne « déploie » donc rien : il ne fait que la CI (validation),
+#   c'est-à-dire exécuter la suite de tests avant/à côté du redéploiement
+#   automatique déclenché par Streamlit Cloud.
+#
+#   Configuration côté Streamlit Cloud (une seule fois, dans l'UI) :
+#     - Repository : filalisalah/demo-phd-Ref-UOL08435
+#     - Branch     : main
+#     - Main file  : app.py
+#     - Python     : 3.11 (via runtime.txt -> python-3.11)
+#
+# Pipeline :
+#   1. job `test`   : installe les deps de dev et lance `python -m pytest -q`
+#                     (aucun secret requis).
+#   2. job `notify` : (needs: test) affiche un rappel dans les logs indiquant
+#                     que Streamlit Community Cloud redéploie automatiquement
+#                     depuis `main`. Aucun secret requis.
+#
+# Aucun secret ni variable GitHub n'est nécessaire pour que ce workflow passe
+# au vert.
+#
+# -----------------------------------------------------------------------------
+# VARIANTE CLOUD RUN (DÉSACTIVÉE — conservée pour réactivation future)
+# -----------------------------------------------------------------------------
+# Le déploiement Cloud Run + Artifact Registry + Workload Identity Federation a
+# été abandonné faute de facturation GCP active. Pour le réactiver plus tard :
+#   1. Activer la facturation sur le projet GCP.
+#   2. Créer/activer les APIs : run.googleapis.com, artifactregistry.googleapis.com,
+#      iamcredentials.googleapis.com.
+#   3. Configurer Workload Identity Federation (pool + provider) et les secrets
+#      GitHub associés (GCP_PROJECT_ID, GCP_REGION, GCP_SERVICE_ACCOUNT,
+#      GCP_WORKLOAD_IDENTITY_PROVIDER).
+#   4. Décommenter le job `deploy-cloud-run` ci-dessous et l'adapter.
+#
+#   deploy-cloud-run:
+#     name: Deploy (Cloud Run)
+#     needs: test
+#     if: github.ref == 'refs/heads/main'
+#     runs-on: ubuntu-latest
+#     permissions:
+#       contents: read
+#       id-token: write
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v4
+#
+#       - name: Authenticate to Google Cloud (WIF)
+#         uses: google-github-actions/auth@v2
+#         with:
+#           workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+#           service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+#
+#       - name: Set up Cloud SDK
+#         uses: google-github-actions/setup-gcloud@v2
+#
+#       - name: Configure Docker for Artifact Registry
+#         run: gcloud auth configure-docker ${{ vars.GCP_REGION }}-docker.pkg.dev --quiet
+#
+#       - name: Build and push image
+#         run: |
+#           IMAGE="${{ vars.GCP_REGION }}-docker.pkg.dev/${{ vars.GCP_PROJECT_ID }}/aura-grid/app:${{ github.sha }}"
+#           docker build -t "$IMAGE" .
+#           docker push "$IMAGE"
+#
+#       - name: Deploy to Cloud Run
+#         run: |
+#           gcloud run deploy aura-grid \
+#             --image "${{ vars.GCP_REGION }}-docker.pkg.dev/${{ vars.GCP_PROJECT_ID }}/aura-grid/app:${{ github.sha }}" \
+#             --region "${{ vars.GCP_REGION }}" \
+#             --platform managed \
+#             --allow-unauthenticated \
+#             --quiet
+# =============================================================================
+
+name: CI — AURA-Grid (Streamlit Community Cloud)
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ---------------------------------------------------------------------------
+  # Job 1 : tests (sans secrets)
+  # ---------------------------------------------------------------------------
+  test:
+    name: Test (pytest)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dev dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Run tests
+        run: python -m pytest -q
+
+  # ---------------------------------------------------------------------------
+  # Job 2 : notification (Streamlit Community Cloud redéploie automatiquement)
+  # ---------------------------------------------------------------------------
+  notify:
+    name: Notify (Streamlit Cloud auto-deploy)
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reminder — Streamlit Community Cloud auto-deploy
+        run: |
+          echo "✅ Tests OK sur la branche main."
+          echo "🚀 Streamlit Community Cloud redéploie automatiquement l'app"
+          echo "   depuis le dépôt GitHub (branche main, fichier app.py)."
+          echo "   Aucune action de déploiement n'est nécessaire ici."
+          echo "   Dashboard : https://share.streamlit.io"

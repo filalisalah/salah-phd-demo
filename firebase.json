@@ -1,0 +1,14 @@
+{
+  "hosting": [
+    {
+      "target": "elearning",
+      "public": "public-elearning",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    },
+    {
+      "target": "aura-grid",
+      "public": "public-aura-grid",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    }
+  ]
+}

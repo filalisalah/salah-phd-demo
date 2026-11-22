@@ -1,0 +1,27 @@
+# =============================================================================
+# Streamlit theme — "Dark Modern" (VS Code inspired)
+# =============================================================================
+# Palette:
+#   background        #1F1F1F  (main background)
+#   secondary         #181818  (panels / sidebar)
+#   widgets/inputs    #313131
+#   borders           #3C3C3C
+#   text              #CCCCCC
+#   accent            #0078D4  (hover #026EC1)
+#   success #2EA043 / error #F85149 / warning #D29922
+# =============================================================================
+
+[theme]
+base = "dark"
+primaryColor = "#0078D4"
+backgroundColor = "#1F1F1F"
+secondaryBackgroundColor = "#181818"
+textColor = "#CCCCCC"
+# font = "monospace"  # disabled: the global monospace theme font also
+#                     # overrode the Material Symbols icon font.
+
+[server]
+headless = true
+
+[client]
+toolbarMode = "minimal"
