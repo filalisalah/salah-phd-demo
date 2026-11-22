@@ -979,9 +979,10 @@ def render_sidebar() -> Dict[str, Any]:
 
     # --- Scenario group (rendered below the execution mode) -----------------
     scenario_key = st.sidebar.selectbox(
-        "Scenario",
+        "Choose a Scenario",
         options=list(SCENARIOS.keys()),
         index=0,
+        key="scenario_select",
     )
     scenario = SCENARIOS[scenario_key]
 
@@ -1263,6 +1264,27 @@ def main() -> None:
 
         @media (prefers-reduced-motion: reduce) {
             [data-testid="stDownloadButton"] button p::before {
+                animation: none;
+            }
+        }
+
+        /* --- "Choose a Scenario" label: larger + blinking ---------------- */
+        .st-key-scenario_select [data-testid="stWidgetLabel"] p,
+        .st-key-scenario_select label p {
+            font-size: 1.4rem !important;
+            font-weight: 800 !important;
+            line-height: 1.2 !important;
+            animation: scenario-label-blink 1.1s ease-in-out infinite;
+        }
+
+        @keyframes scenario-label-blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.15; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .st-key-scenario_select [data-testid="stWidgetLabel"] p,
+            .st-key-scenario_select label p {
                 animation: none;
             }
         }
