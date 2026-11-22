@@ -52,12 +52,12 @@ import streamlit.components.v1 as components
 # 1. GLOBAL CONSTANTS
 # =============================================================================
 
-# --- Intellectual property notice (displayed in header, footer and sidebar) --
+# --- Copyright / license notice (displayed in header, footer and sidebar) ---
 IP_NOTICE = (
-    "© 2026 EL FILALI SALAH ADDINE — Proprietary Academic Research Prototype. "
-    "Authorized exclusively for University of Luxembourg (SnT / UBIX) evaluation "
-    "and doctoral supervision upon admission (Ref: UOL08435). Non-production "
-    "architectural demonstrator."
+    "© 2026 EL FILALI SALAH ADDINE — Open-Source Academic Research Prototype "
+    "(Release v1.2-DEMO, 22 Nov 2026, MIT Licensed). Developed for University "
+    "of Luxembourg (SnT / UBIX) doctoral candidacy evaluation (Ref: UOL08435). "
+    "Non-production synthetic demonstrator; no warranty or liability."
 )
 
 # --- Canonical agent identifiers -------------------------------------------

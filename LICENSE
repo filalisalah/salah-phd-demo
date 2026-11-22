@@ -1,26 +1,12 @@
-ACADEMIC EVALUATION & PROPRIETARY SOURCE-AVAILABLE LICENSE
-Version 1.0 — November 2026
+MIT License — Scoped Strictly to Release v1.2-DEMO (22 November 2026)
 
-Copyright (c) 2026 EL FILALI SALAH ADDINE. All Rights Reserved.
+Copyright (c) 2026 EL FILALI SALAH ADDINE
 
-ACADEMIC CONTEXT NOTICE
-This repository is an independent pre-application research prototype created by EL FILALI SALAH ADDINE (© 2026) for the evaluation of doctoral candidacy (Ref: UOL08435, SnT / UBIX Research Group, University of Luxembourg) and potential future academic supervision.
+SCOPE & VERSION RESTRICTION:
+This MIT License applies EXCLUSIVELY to the specific code snapshot tagged and published as "Release v1.2-DEMO" on 22 November 2026 (22/11/2026). All other commits, branches, private repositories, prior revisions, and subsequent versions (post-v1.2-DEMO) remain the exclusive proprietary intellectual property of EL FILALI SALAH ADDINE (All Rights Reserved) and are NOT covered by this open-source grant.
 
-1. INTELLECTUAL PROPERTY & OWNERSHIP
-This software, its source code, architectural specifications (including SPEC.md), and documentation (collectively, the "Software") are the exclusive intellectual property of the original author, EL FILALI SALAH ADDINE (the "Author"). Nothing in this License constitutes a transfer, assignment, or waiver of intellectual property rights. No third party may claim authorship, ownership, or patent rights over the Software or any derivative thereof.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files for Release v1.2-DEMO (22 November 2026) (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-2. RESTRICTED GRANT OF RIGHTS (UNIVERSITY OF LUXEMBOURG EXCLUSIVE SCOPE)
-The Author hereby grants a non-exclusive, non-transferable, revocable, and royalty-free license strictly limited to faculty members, the Doctoral Selection Committee, and authorized evaluators of the University of Luxembourg (specifically within the Interdisciplinary Centre for Security, Reliability and Trust — SnT, and the UBIX Research Group) solely for the following permitted purposes:
-  (a) Inspecting, executing, and evaluating the Software in the context of assessing the Author's application for the Doctoral Researcher position (Job Reference: UOL08435); and
-  (b) Utilizing and extending the Software for academic supervision and collaborative research strictly in the event that the Author is formally admitted and contracted as a Doctoral Researcher at the University of Luxembourg.
+The above copyright notice, this scope restriction notice, and this permission notice shall be included in all copies or substantial portions of the Software.
 
-3. PROHIBITED USES
-Except as expressly permitted under Section 2, no person, institution, or commercial entity is permitted to:
-  (a) Copy, modify, redistribute, sublicense, or publish the Software;
-  (b) Sell, lease, commercialize, or integrate the Software into any commercial or industrial product;
-  (c) Use the Software for any purpose unrelated to the evaluation of the Author's doctoral candidacy or subsequent doctoral supervision.
-
-4. INCOMPLETE DEMONSTRATION STATUS & DISCLAIMER OF LIABILITY
-The Software is provided strictly as an incomplete, pre-application Research Prototype & Architectural Demonstrator intended to demonstrate theoretical and technical concepts. It is NOT a completed production system and is NOT certified for real-world energy grid operations.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES, REGULATORY PENALTIES, FINANCIAL LOSS, OR OTHER LIABILITY ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE FOR ANY PURPOSE OUTSIDE THE PERMITTED ACADEMIC EVALUATION SCOPE DEFINED IN SECTION 2.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

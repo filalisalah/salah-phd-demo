@@ -1,10 +1,11 @@
-> ### ⚠️ Academic Disclaimer & Notice of Proprietary Research Prototype
+> ### Open-Source Release Notice — v1.2-DEMO (22 November 2026)
 > **Independent Pre-Application Research Prototype & Architectural Demonstrator (Ref: UOL08435)**
-> **Author & Copyright Holder:** EL FILALI SALAH ADDINE (© 2026 — All Rights Reserved)
+> **Author & Copyright Holder:** EL FILALI SALAH ADDINE (© 2026)
 >
 > 1. **Purpose & Scope:** **AURA-Grid Research Prototype & Architectural Demonstrator** is an incomplete, non-production architectural demonstration developed independently by **EL FILALI SALAH ADDINE** solely to support his doctoral application for the position *"Doctoral Researcher in Reliable and Explainable Multi-Agent AI Systems"* (Ref: **UOL08435**) within the **UBIX Research Group / SnT** at the **University of Luxembourg**, and for subsequent academic supervision upon admission.
 > 2. **100% Synthetic Data:** All grid topologies, substation identifiers, financial metrics, and failure scenarios included in this repository are entirely synthetic and simulated for conceptual demonstration. No proprietary, confidential, or real-world operational utility data is used.
 > 3. **Non-Liability:** This software is an experimental academic demonstrator and must not be deployed in real operational environments. The author assumes no responsibility or liability for any use of this code outside the evaluation of his doctoral candidacy or official academic supervision.
+> 4. **License Scope:** The MIT License applies **exclusively** to the code snapshot published as **Release v1.2-DEMO (22 November 2026)**. All other commits, branches, prior revisions, and subsequent versions remain proprietary (All Rights Reserved). See [`LICENSE`](LICENSE).
 
 # AURA-Grid Research Prototype & Architectural Demonstrator — Auditable & Reliable Multi-Agent System for Regulated Energy Operations
 
@@ -296,23 +297,25 @@ aura-grid-poc/
 
 ## 12. License
 
-This project is distributed under a **custom proprietary license** — **All
-Rights Reserved** — as defined in the [`LICENSE`](LICENSE) file at the root of
-this repository. It is **not** released under any open-source or permissive
-license (no MIT, Apache, GPL, or BSD terms apply).
+**Release v1.2-DEMO (22 November 2026)** is released as **open source** under
+the **MIT License**. You are free to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of this specific release, provided
+the copyright, scope-restriction, and permission notices are retained. See the
+[`LICENSE`](LICENSE) file for the full text.
 
-**© 2026 EL FILALI SALAH ADDINE. All Rights Reserved.**
+**Scope restriction.** This MIT grant is deliberately **limited to the
+v1.2-DEMO snapshot published on 22/11/2026**. All other commits, branches,
+prior revisions, private repositories, and subsequent versions
+(post-v1.2-DEMO) remain the **exclusive proprietary intellectual property** of
+**EL FILALI SALAH ADDINE (All Rights Reserved)** and are **not** covered by
+this open-source grant.
 
-Use is **strictly limited** to the evaluation of the Author's doctoral
-application (Job Reference: **UOL08435**) within the **UBIX Research Group /
-SnT** at the **University of Luxembourg**, and to subsequent official academic
-supervision upon admission. Any other use — copying, modification,
-redistribution, or commercial exploitation — is prohibited.
-
-See the [`LICENSE`](LICENSE) file for the full license text.
+**© 2026 EL FILALI SALAH ADDINE.** This prototype was developed for the
+evaluation of the Author's doctoral application (Job Reference: **UOL08435**)
+within the **UBIX Research Group / SnT** at the **University of Luxembourg**,
+and for subsequent official academic supervision upon admission.
 
 > ⚠️ **Disclaimer.** This software is an **incomplete Research Prototype &
-> Architectural Demonstrator**,
-> provided **"AS IS"**, without warranty of any kind, express or implied. It is
-> **not certified** for real-world energy grid operations and must not be used
-> for operational decisions.
+> Architectural Demonstrator**, provided **"AS IS"**, without warranty of any
+> kind, express or implied. It is **not certified** for real-world energy grid
+> operations and must not be used for operational decisions.
